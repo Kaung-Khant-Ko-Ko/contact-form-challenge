@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Contact form</title>
+  </head>
+  <body>
+    <form class="form">
+      <p class="form__title">Contact Us</p>
+      <div class="form__input">
+        <label for="fname" class="form__input-fname">First Name</label>
+        <label for="lname" class="form__input-lname">Last Name</label>
+        <input type="text" name="fname" id="fname" />
+        <input type="text" name="lname" id="lname" />
+        <p class="form__input-fname-error">This field is required</p>
+        <p class="form__input-lname-error">This field is required</p>
+      </div>
+      <div class="form__input">
+        <label for="email" class="form__input-email">Email Address</label>
+        <input type="email" name="email" id="email" />
+        <p class="form__input-email-error">
+          This field is required/Please enter a valid email address
+        </p>
+      </div>
+      <fieldset class="form__input">
+        <legend class="form__input-query-type">Query Type</legend>
+        <input type="radio" name="query-type" id="general-enquiry" />
+        <label for="general-enquiry">General Enquiry</label>
+        <input type="radio" name="query-type" id="support-request" />
+        <label for="support-request">Support Request</label>
+        <p class="form__input-query-type-error">Please select a query type</p>
+      </fieldset>
+      <div class="form__input">
+        <label for="message" class="form__input-message">Message</label>
+        <input type="text" name="message" id="message" />
+        <p class="form__input-message-error">This field is required</p>
+      </div>
+      <div class="form__input">
+        <input type="checkbox" name="consent" id="consent" />
+        <label for="consent" class="form__input-consent"
+          >I consent to being contacted by the team</label
+        >
+        <p class="form__input-consent-error">
+          To submit this form, please consent to being contacted
+        </p>
+      </div>
+      <input type="submit" value="Submit" />
+    </form>
+    <div class="success-message">
+      <img
+        src="./assets/images/icon-success-check.svg"
+        alt="Success check icon"
+      />
+      <p class="success-message__title">Message Sent!</p>
+      <p class="success-message__desc">
+        Thanks for completing the form. We'll be in touch soon!
+      </p>
+    </div>
+  </body>
+</html>
