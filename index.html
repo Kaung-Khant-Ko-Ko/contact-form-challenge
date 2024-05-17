@@ -12,55 +12,109 @@
       href="./assets/images/favicon-32x32.png"
     />
 
+    <link rel="stylesheet" href="./style.css" />
+
     <title>Frontend Mentor | Contact form</title>
   </head>
   <body>
     <form class="form">
-      <p class="form__title">Contact Us</p>
-      <div class="form__input">
-        <label for="fname" class="form__input-fname">First Name</label>
-        <label for="lname" class="form__input-lname">Last Name</label>
-        <input type="text" name="fname" id="fname" />
-        <input type="text" name="lname" id="lname" />
+      <h1 class="form__title">Contact Us</h1>
+      <div class="form__input-row-fname-lname">
+        <label for="fname" class="form__input-fname"
+          >First Name<span aria-label="required">*</span></label
+        >
+        <label for="lname" class="form__input-lname"
+          >Last Name<span aria-label="required">*</span></label
+        >
+        <input
+          type="text"
+          name="fname"
+          id="fname"
+          autocomplete="given-name"
+          required
+        />
+        <input
+          type="text"
+          name="lname"
+          id="lname"
+          autocomplete="family-name"
+          required
+        />
         <p class="form__input-fname-error">This field is required</p>
         <p class="form__input-lname-error">This field is required</p>
       </div>
-      <div class="form__input">
-        <label for="email" class="form__input-email">Email Address</label>
-        <input type="email" name="email" id="email" />
+      <div class="form__input-row-email">
+        <label for="email" class="form__input-email"
+          >Email Address<span aria-label="required">*</span></label
+        >
+        <input
+          type="email"
+          name="email"
+          id="email"
+          autocomplete="email"
+          required
+        />
         <p class="form__input-email-error">
           This field is required/Please enter a valid email address
         </p>
       </div>
-      <fieldset class="form__input">
-        <legend class="form__input-query-type">Query Type</legend>
-        <input type="radio" name="query-type" id="general-enquiry" />
-        <label for="general-enquiry">General Enquiry</label>
-        <input type="radio" name="query-type" id="support-request" />
-        <label for="support-request">Support Request</label>
+      <div class="form__input-row-query-type">
+        <p class="form__input-query-type">
+          Query Type<span aria-label="required">*</span>
+        </p>
+        <label for="general-enquiry" class="form__input-general-enquiry"
+          ><input
+            type="radio"
+            name="query-type"
+            id="general-enquiry"
+            required
+          />
+          General Enquiry</label
+        >
+        <label for="support-request" class="form__input-support-request"
+          ><input
+            type="radio"
+            name="query-type"
+            id="support-request"
+            required
+          />
+          Support Request</label
+        >
         <p class="form__input-query-type-error">Please select a query type</p>
-      </fieldset>
-      <div class="form__input">
-        <label for="message" class="form__input-message">Message</label>
-        <input type="text" name="message" id="message" />
+      </div>
+      <div class="form__input-row-message">
+        <label for="message" class="form__input-message"
+          >Message<span aria-label="required">*</span></label
+        >
+        <textarea name="message" id="message" required></textarea>
         <p class="form__input-message-error">This field is required</p>
       </div>
-      <div class="form__input">
-        <input type="checkbox" name="consent" id="consent" />
+      <div class="form__input-row-consent">
         <label for="consent" class="form__input-consent"
-          >I consent to being contacted by the team</label
+          ><input type="checkbox" name="consent" id="consent" required /> I
+          consent to being contacted by the team<span aria-label="required"
+            >*</span
+          ></label
         >
         <p class="form__input-consent-error">
           To submit this form, please consent to being contacted
         </p>
       </div>
-      <input type="submit" value="Submit" />
+      <input type="submit" value="Submit" class="form__submit-btn" />
     </form>
     <div class="success-message">
-      <img
-        src="./assets/images/icon-success-check.svg"
-        alt="Success check icon"
-      />
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="20"
+        height="21"
+        fill="none"
+        viewBox="0 0 20 21"
+      >
+        <path
+          fill="#fff"
+          d="M14.28 7.72a.748.748 0 0 1 0 1.06l-5.25 5.25a.748.748 0 0 1-1.06 0l-2.25-2.25a.75.75 0 1 1 1.06-1.06l1.72 1.72 4.72-4.72a.75.75 0 0 1 1.06 0Zm5.47 2.78A9.75 9.75 0 1 1 10 .75a9.76 9.76 0 0 1 9.75 9.75Zm-1.5 0A8.25 8.25 0 1 0 10 18.75a8.26 8.26 0 0 0 8.25-8.25Z"
+        />
+      </svg>
       <p class="success-message__title">Message Sent!</p>
       <p class="success-message__desc">
         Thanks for completing the form. We'll be in touch soon!

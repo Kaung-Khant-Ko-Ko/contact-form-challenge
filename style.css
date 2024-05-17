@@ -1,0 +1,167 @@
+@font-face {
+  font-family: "Karla", sans-serif;
+  src: url("./assets/fonts/static/Karla-Bold.ttf"),
+    url("./assets/fonts/static/Karla-Regular.ttf");
+  font-weight: 400, 700;
+}
+
+body {
+  margin: 0px;
+  padding: 125px 24.31%;
+
+  background-color: hsl(148, 38%, 91%);
+
+  font-size: 16px;
+  font-weight: 400;
+  color: hsl(187, 24%, 22%);
+}
+
+p {
+  margin: 10px 0px;
+}
+
+input {
+  padding: 0px 20px;
+  border-radius: 5px;
+  border: 1px solid hsl(187, 24%, 22%);
+}
+
+.form {
+  padding: 40px;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 10px;
+
+  display: flex;
+  gap: 30px;
+  flex-direction: column;
+}
+
+.form__title {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0px;
+}
+
+.form__input-row-fname-lname {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 50px auto;
+  column-gap: 15px;
+}
+
+span {
+  margin: 5px;
+  color: hsl(169, 82%, 27%);
+}
+
+.form__input-fname,
+.form__input-lname,
+.form__input-email,
+.form__input-message {
+  margin: 10px 0px;
+}
+
+.form__input-row-email {
+  display: grid;
+  grid-template-rows: auto 50px auto;
+}
+
+.form__input-row-query-type {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 50px auto;
+  column-gap: 15px;
+}
+
+.form__input-query-type,
+.form__input-query-type-error {
+  grid-column: span 2;
+}
+
+.form__input-general-enquiry,
+.form__input-support-request {
+  padding: 0px 20px;
+  border-radius: 5px;
+  border: 1px solid hsl(187, 24%, 22%);
+
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+#message {
+  padding: 20px;
+  border-radius: 5px;
+  border: 1px solid hsl(187, 24%, 22%);
+}
+
+.form__input-row-message {
+  display: grid;
+  grid-template-rows: auto 105px auto;
+}
+
+#consent {
+  margin-right: 2.27%;
+}
+
+.form__input-consent {
+  display: flex;
+  align-items: center;
+}
+
+.form__submit-btn {
+  height: 50px;
+  background-color: hsl(169, 82%, 27%);
+  color: hsl(0, 0%, 100%);
+}
+
+.success-message {
+  width: 410px;
+  height: 65px;
+  padding: 20px;
+
+  position: absolute;
+  top: 20px;
+  left: calc(50% - 225px);
+
+  background-color: hsl(187, 24%, 22%);
+  color: white;
+
+  display: grid;
+  column-gap: 5px;
+  grid-template-columns: 25px auto;
+  grid-template-rows: auto auto;
+  align-items: center;
+  border-radius: 7px;
+}
+
+.success-message__title {
+  margin: 0px;
+}
+
+.success-message__desc {
+  grid-column: span 2;
+  margin: 0px;
+}
+
+#fname:hover,
+#lname:hover,
+#email:hover,
+#general-enquiry:hover,
+.form__input-general-enquiry:hover,
+#support-request:hover,
+.form__input-support-request:hover,
+#message:hover {
+  cursor: pointer;
+  border-color: hsl(169, 82%, 27%);
+}
+
+#consent:hover,
+.form__input-consent:hover {
+  cursor: pointer;
+}
+
+.form__submit-btn:hover {
+  cursor: pointer;
+  background-color: hsl(169, 82%, 17%);
+}
