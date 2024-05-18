@@ -30,18 +30,18 @@
           type="text"
           name="fname"
           id="fname"
+          class="form__input"
           autocomplete="given-name"
-          required
         />
         <input
           type="text"
           name="lname"
           id="lname"
+          class="form__input"
           autocomplete="family-name"
-          required
         />
-        <p class="form__input-fname-error">This field is required</p>
-        <p class="form__input-lname-error">This field is required</p>
+        <p id="fname-error" class="error-msg">This field is required</p>
+        <p id="lname-error" class="error-msg">This field is required</p>
       </div>
       <div class="form__input-row-email">
         <label for="email" class="form__input-email"
@@ -51,56 +51,67 @@
           type="email"
           name="email"
           id="email"
+          class="form__input"
           autocomplete="email"
-          required
         />
-        <p class="form__input-email-error">
-          This field is required/Please enter a valid email address
-        </p>
+        <p id="email-error" class="error-msg">This field is required</p>
       </div>
       <div class="form__input-row-query-type">
         <p class="form__input-query-type">
           Query Type<span aria-label="required">*</span>
         </p>
-        <label for="general-enquiry" class="form__input-general-enquiry"
+        <label
+          for="general-enquiry"
+          class="form__input-general-enquiry form__input"
           ><input
             type="radio"
             name="query-type"
             id="general-enquiry"
-            required
+            class="form__input"
+            value="general-enquiry"
           />
           General Enquiry</label
         >
-        <label for="support-request" class="form__input-support-request"
+        <label
+          for="support-request"
+          class="form__input-support-request form__input"
           ><input
             type="radio"
             name="query-type"
             id="support-request"
-            required
+            class="form__input"
+            value="support-request"
           />
           Support Request</label
         >
-        <p class="form__input-query-type-error">Please select a query type</p>
+        <p id="query-type-error" class="form__input-query-type-error error-msg">
+          Please select a query type
+        </p>
       </div>
       <div class="form__input-row-message">
         <label for="message" class="form__input-message"
           >Message<span aria-label="required">*</span></label
         >
-        <textarea name="message" id="message" required></textarea>
-        <p class="form__input-message-error">This field is required</p>
+        <textarea name="message" id="message" class="form__input"></textarea>
+        <p id="message-error" class="error-msg">This field is required</p>
       </div>
       <div class="form__input-row-consent">
         <label for="consent" class="form__input-consent"
-          ><input type="checkbox" name="consent" id="consent" required /> I
-          consent to being contacted by the team<span aria-label="required"
+          ><input
+            type="checkbox"
+            name="consent"
+            id="consent"
+            class="form__input"
+          />
+          I consent to being contacted by the team<span aria-label="required"
             >*</span
           ></label
         >
-        <p class="form__input-consent-error">
+        <p id="consent-error" class="error-msg">
           To submit this form, please consent to being contacted
         </p>
       </div>
-      <input type="submit" value="Submit" class="form__submit-btn" />
+      <button type="button" class="form__submit-btn">Submit</button>
     </form>
     <div class="success-message">
       <svg
@@ -120,5 +131,7 @@
         Thanks for completing the form. We'll be in touch soon!
       </p>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./index.js"></script>
   </body>
 </html>
