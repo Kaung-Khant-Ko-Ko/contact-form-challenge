@@ -6,10 +6,13 @@
 }
 
 body {
-  margin: 0px;
-  padding: 125px 24.31%;
+  margin: 0px auto;
 
   background-color: hsl(148, 38%, 91%);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   font-size: 16px;
   font-weight: 400;
@@ -27,6 +30,9 @@ input {
 }
 
 .form {
+  margin: 125px 15px;
+  width: calc(100% - 110px);
+  max-width: 660px;
   padding: 40px;
   background-color: hsl(0, 0%, 100%);
   border-radius: 10px;
@@ -99,7 +105,7 @@ span {
 
 .form__input-general-enquiry,
 .form__input-support-request {
-  padding: 0px 20px;
+  padding: 0px 0px 0px 20px;
   border-radius: 5px;
   border: 1px solid hsl(187, 24%, 22%);
 
@@ -126,9 +132,15 @@ span {
   accent-color: hsl(169, 82%, 27%);
 }
 
-.form__input-consent {
-  display: flex;
+.form__input-row-consent {
+  display: grid;
+  grid-template-columns: 30px auto;
+  grid-template-rows: auto auto;
   align-items: center;
+}
+
+#consent-error {
+  grid-column: span 2;
 }
 
 .error-msg {
@@ -150,13 +162,13 @@ span {
 }
 
 .success-message {
-  width: 410px;
+  max-width: 410px;
+  width: calc(100% - 100px);
   height: 65px;
   padding: 20px;
 
   position: absolute;
   top: 20px;
-  left: calc(50% - 225px);
 
   background-color: hsl(187, 24%, 22%);
   color: white;
@@ -192,4 +204,48 @@ span {
 .form__submit-btn:hover {
   cursor: pointer;
   background-color: hsl(169, 82%, 17%);
+}
+
+@media (max-width: 490px) {
+  .form__input-row-fname-lname {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 50px auto auto 50px auto;
+  }
+
+  #fname-error {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+  }
+
+  .form__input-lname {
+    margin-top: 30px;
+    grid-column: 1 / 2;
+    grid-row: 4 / 5;
+  }
+
+  #lname {
+    grid-column: 1 / 2;
+    grid-row: 5 / 6;
+  }
+
+  #lname-error {
+    grid-column: 1 / 2;
+    grid-row: 6 / 7;
+  }
+
+  .form__input-row-query-type {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 50px 50px auto;
+    column-gap: 0px;
+    row-gap: 15px;
+  }
+
+  .form__input-query-type,
+  .form__input-query-type-error {
+    grid-column: 1 / 2;
+  }
+
+  .form__input-row-message {
+    grid-template-rows: auto 240px auto;
+  }
 }

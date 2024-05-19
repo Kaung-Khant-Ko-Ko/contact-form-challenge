@@ -1,6 +1,12 @@
 let radio1 = $(".form__input-general-enquiry");
 let radio2 = $(".form__input-support-request");
 
+$(window).resize(function () {
+  let msg_width =
+    $(window).width() / 2 - $(".success-message").innerWidth() / 2;
+  $(".success-message").css("left", msg_width);
+});
+
 $(".error-msg").slideUp(0);
 $(".success-message").slideUp(0);
 
