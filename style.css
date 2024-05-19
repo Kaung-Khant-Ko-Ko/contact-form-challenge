@@ -148,7 +148,7 @@ span {
 }
 
 .warning {
-  border-color: hsl(0, 66%, 56%);
+  border-color: hsl(0, 66%, 56%) !important;
 }
 
 .form__submit-btn {
